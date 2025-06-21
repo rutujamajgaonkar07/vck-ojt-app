@@ -1,6 +1,7 @@
 import { Route, BrowserRouter as Router,Routes } from "react-router-dom"
 import HomePage from "./pages/HomePage"
 import AboutPages from "./pages/AboutPage"
+import './styles/Pages.css'
 const App = () => {
     return (
         <div>
