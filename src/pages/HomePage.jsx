@@ -1,3 +1,5 @@
+//  src/pages/HomePage.jsx
+
 import { Link } from "react-router-dom"; // Import Link for internal navigation
 
 // Add more image imports if needed
@@ -14,9 +16,9 @@ const HomePage = () => {
 
         <img
 
-          src="/images/college-banner.png"
+          src="/Images/college-banner.png"
 
-          alt="Vivekanand College Campus"
+          alt="/Images/campus-life.jpg"
 
           className="hero-banner-image"
 
