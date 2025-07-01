@@ -1,24 +1,59 @@
-import { Route, BrowserRouter as Router,Routes } from "react-router-dom"
-import HomePage from "./pages/HomePage"
-import AboutPages from "./pages/AboutPage"
-import './styles/Pages.css'
-import ChatbotComponent from "./components/Chatbot/ChatbotComponents"
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import Contactpage from "./pages/ContactPage";
+import CoursesPage from "./pages/CoursesPage";
+// import AdmissionPage from "./pages/AdmissionPage";
+import AdmissionPage from "./pages/AdmissionPage";
+import "./styles/pages.css";
+import "./App.css";
+
+import Header from "./components/Header/Header";
+import ChatbotComponent from "./components/Chatbot/ChatbotComponents";
+import Footer from "./components/Footer/Footer";
+import { useState } from "react";
+import DeveloperInfoPopup from "./components/Developerinfo/DeveloperInfoPopup";
+
+
+
 const App = () => {
-    return (
-        <div>
-          <Router>
+  const [showPopup, setShowPopup] = useState(true);
+  const handleClosePopup = () => {
+    setShowPopup(false);
+  };
+    return(
+      <>
+      <div>
+        {/* Your main application content */}
+        <DeveloperInfoPopup
+          show={showPopup}
+          onClose={handleClosePopup}
+          studentName="Rutuja Ganesh Majgaonkar"
+          studentPhotoUrl="/public/Images/rutu.jpg" // Path to their photo
+          uniqueMessage="Learned so much during this OJT! This app showcases my independent coding and deployment skills"
+        />
+      </div>
+      <Router>
+        <div className="main-layout">
+          <Header/>
+          <div className="content">
             <Routes>
-                  <Route path="/" element={<HomePage/>} />
-                  <Route path="/home" element={<HomePage/>}/>
-                  <Route path="/about" element={<AboutPages/>}/>
-                  
+              <Route path="/" element={<HomePage/>}/>
+              <Route path="/about" element={<AboutPage/>}/>
+              <Route path="/courses" element={<CoursesPage/>}/>
+               {/* <Route path="/courses" element={<Co}/>  */}
+              <Route path="/contact" element={<Contactpage/>}/>
+              {/* <Route path="/admissions" element={<AdmissionPage/>}/> */}
+              <Route path="/admission" element={<AdmissionPage/>}/>
             </Routes>
-            <div>
-                <ChatbotComponent/>
-            </div>
-            </Router>         
-        </div>
-    )
+          </div>
+          <Footer/>
+          <ChatbotComponent/>
+      </div>
+      </Router>
+      </>
+  )
 }
 
-export default App
+export default App;
+//Rutuja Ganesh Majgaonkar BCA III

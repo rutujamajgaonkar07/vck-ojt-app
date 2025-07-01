@@ -1,4 +1,4 @@
-// /src/components/Chatbot/ChatbotComponent.jsx
+// / src/components/Chatbot/ChatbotComponent.jsx
 import React, { useState, useEffect, useRef } from "react";
 import { getEmbeddings, cosineSimilarity } from "../../utils/aiService"; // Path adjusted
 import { SIMILARITY_THRESHOLD } from "../../utils/constants"; // Path adjusted
@@ -137,7 +137,7 @@ const ChatbotComponent = () => {
       {!isChatOpen && (
         <button className="chatbot-open-button" onClick={toggleChat}>
           <img
-            src="/Images/operator.png"
+            src="/Images\operator.png"
             alt="Chat Icon"
             style={{ width: "100px", height: "auto" }}
           />

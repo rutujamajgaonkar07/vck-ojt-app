@@ -1,4 +1,4 @@
-//src/utils/aiService.js
+// src/utils/aiService.js
 const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
 /**
  * Fetches text embeddings from the Google Gemini API.
